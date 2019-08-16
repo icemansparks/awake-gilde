@@ -486,3 +486,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .color_open{
 	color: #2ecc71;
 }
+
+.color_closed, .color_low, .color_medium, .color_open{
+	font-weight: bold;
+}
