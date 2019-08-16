@@ -423,11 +423,17 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	color: #000;
 }
 
+.img-responsive{
+	display: inline;
+}
+
 
 /* recruitment table */
 .divTable{
 	display: table;
 	width: 300px;
+	text-align: center;
+    margin: 0 auto;
 }
 .divTableRow {
 	display: table-row;
@@ -453,4 +459,17 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 .divTableBody {
 	display: table-row-group;
+}
+
+.color_closed{
+	color: #7f8c8d;
+}
+.color_low{
+	color: #c0392b;
+}
+.color_medium{
+	color: #f1c40f;
+}
+.color_open{
+	color: #2ecc71;
 }
