@@ -459,14 +459,14 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .divTableCell, .divTableHead {
 	border: 1px solid #fff;
     display: table-cell;
-    padding: 3px 10px;
+    padding: .5rem 1rem;
     color: #fff;
     background-color: #333;
 }
 .divTableHead {
 	font-weight: bold;
     text-align: center;
-    font-size: 18px;
+    font-size: 2rem;
 }
 .divTableFoot {
 	background-color: #333;
