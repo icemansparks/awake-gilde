@@ -423,10 +423,11 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	color: #000;
 }
 
-/* DivTable.com */
+
+/* recruitment table */
 .divTable{
 	display: table;
-	width: 100%;
+	width: 300px;
 }
 .divTableRow {
 	display: table-row;
