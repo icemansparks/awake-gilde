@@ -457,17 +457,20 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	display: table-row;
 }
 .divTableCell, .divTableHead {
-	border: 1px solid #999999;
-	display: table-cell;
-	padding: 3px 10px;
+	border: 1px solid #fff;
+    display: table-cell;
+    padding: 3px 10px;
+    color: #fff;
+    background-color: #333;
 }
 .divTableHead {
-	background-color: #EEE;
 	font-weight: bold;
-	text-align: center;
+    text-align: center;
+    font-size: 18px;
 }
 .divTableFoot {
-	background-color: #EEE;
+	background-color: #333;
+	color: #fff;
 	display: table-footer-group;
 	font-weight: bold;
 }
