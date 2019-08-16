@@ -450,7 +450,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .divTable{
 	display: table;
 	width: 300px;
-	text-align: center;
+	text-align: left;
     margin: 0 auto;
 }
 .divTableRow {
@@ -464,6 +464,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .divTableHead {
 	background-color: #EEE;
 	font-weight: bold;
+	text-align: center;
 }
 .divTableFoot {
 	background-color: #EEE;
@@ -489,4 +490,10 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 
 .color_closed, .color_low, .color_medium, .color_open{
 	font-weight: bold;
+	text-align: center;
+}
+
+.divTableCell img {
+    width: 24px;
+    margin-right: 8px;
 }
