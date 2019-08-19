@@ -7,19 +7,24 @@
 </head>
 <body>
 
-   <!-- HTML template -->
-   <memberlist>
+   <div class="row">
 
-<entry>
+    <memberlist class="portfolio-items">
+
 	<div class="col-sm-6 col-md-3 col-lg-3 ">
 	  <player class="portfolio-item player">
 	    <img class="img-responsive playerclass" src="img/class/" alt="">
 	    <playername class="playername"></playername>
 	  </player>
 	</div>
-	</entry>
 
 	</memberlist>
+
+</div>
+
+
+
+
 
   <script>
 
@@ -31,9 +36,9 @@
       ]
    },
    directive = {
-      'entry':{
+      'div':{
         'member<-members':{
-          'div@class+':'member.class',
+          '@class+':'member.class',
           'playername':'member.name', 
           'img@src+': '#{member.class}.png', 
           'img@alt': 'member.klasse', 
