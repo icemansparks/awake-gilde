@@ -1,95 +1,51 @@
-<!-- Portfolio Section -->
-<div id="rooster" class="hidden">
-  <div class="container">
-    <div class="section-title text-center center">
-      <h2>Mitgleider Liste</h2>
-      <hr>
-    </div>
-    <div class="categories">
-      <ul class="cat">
-        <li>
-          <ol class="type">
-            <li><a href="#" data-filter="*" class="active">Alle</a></li>
-            <li><a href="#" data-filter=".druid">Druiden</a></li>
-            <li><a href="#" data-filter=".warlock">Hexenmeister</a></li>
-            <li><a href="#" data-filter=".hunter">Jäger</a></li>
-            <li><a href="#" data-filter=".warrior">Krieger</a></li>
-            <li><a href="#" data-filter=".mage">Magier</a></li>
-            <li><a href="#" data-filter=".priest">Priester</a></li>
-            <li><a href="#" data-filter=".shaman">Schamanen</a></li>
-            <li><a href="#" data-filter=".rogue">Schurken</a></li>
-          </ol>
-        </li>
-      </ul>
-      <div class="clearfix"></div>
-    </div>
-    <div class="row">
-      <div class="portfolio-items">
 
-        <div class="col-sm-6 col-md-3 col-lg-2 druid">
-          <div class="player">
-            <img src="img/class/druid.png" class="img-responsive playerclass" alt="Druide">
-            <div class="playername druid">Tecc</div>
-          </div>
-        </div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PURE Unobtrusive Rendering Engine</title>
+  <script src="http://pure.github.io/pure/libs/pure.js"></script>
+</head>
+<body>
 
-        <div class="col-sm-6 col-md-3 col-lg-2 druid">
-          <div class="player">
-            <img src="img/class/druid.png" class="img-responsive playerclass" alt="Druide">
-            <div class="playername druid">Tecsumo</div>
-          </div>
-        </div>
+   <!-- HTML template -->
+   <memberlist>
 
-        <div class="col-sm-6 col-md-3 col-lg-2 druid">
-          <div class="player">
-            <img src="img/class/druid.png" class="img-responsive playerclass" alt="Druide">
-            <div class="playername druid">Wuusaa</div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3 col-lg-2 druid">
-          <div class="player">
-            <img src="img/class/druid.png" class="img-responsive playerclass" alt="Druide">
-            <div class="playername druid">Jayjojane</div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3 col-lg-2 hunter">
-          <div class="player">
-            <img src="img/class/hunter.png" class="img-responsive playerclass" alt="Jäger">
-            <div class="playername hunter">Sabra</div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3 col-lg-2 warrior">
-          <div class="player">
-            <img src="img/class/warrior.png" class="img-responsive playerclass" alt="Krieger">
-            <div class="playername druid">Serenetas</div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3 col-lg-2 warrior">
-          <div class="player">
-            <img src="img/class/warrior.png" class="img-responsive playerclass" alt="Krieger">
-            <div class="playername druid">Montrocity</div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3 col-lg-2 warrior">
-          <div class="player">
-            <img src="img/class/warrior.png" class="img-responsive playerclass" alt="Krieger">
-            <div class="playername druid">Drölf</div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3 col-lg-2 warrior">
-          <div class="player">
-            <img src="img/class/warrior.png" class="img-responsive playerclass" alt="Krieger">
-            <div class="playername druid">Semibah</div>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </div>
+<div>
+	<entry class="col-sm-6 col-md-3 col-lg-3 ">
+	  <player class="portfolio-item player">
+	    <img class="img-responsive playerclass" src="img/class/" alt="">
+	    <playername class="playername"></playername>
+	  </player>
+	</entry>
 </div>
+	</memberlist>
+
+  <script>
+
+    var data = {
+      members:[
+        {name:'Tecc', class:'druid', klasse:'Druide'},
+        {name:'Sabra', class:'hunter', klasse:'Jäger'},
+        {name:'Blubb', class:'priest', klasse:'Priester'},
+      ]
+   },
+   directive = {
+      'div':{
+        'member<-members':{
+          'entry@class+':'member.class',
+          'playername':'member.name', 
+          'img@src+': '#{member.class}.png', 
+          'img@alt': 'member.klasse', 
+        }
+      }
+    };
+    $p( 'memberlist' ).render( data, directive );
+
+  </script>
+
+
+</body>
+</html>
+
+
+

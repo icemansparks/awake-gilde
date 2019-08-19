@@ -34,6 +34,8 @@
 	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	    <![endif]-->
 	<script src="js/csi.min.js"></script>
+	<script type="text/javascript" src="js/pure.js"></script>
+	
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -78,7 +80,20 @@
       <div class="clearfix"></div>
     </div>
     <div class="row">
-      <div class="portfolio-items">
+
+    	<memberlist class="portfolio-items">
+			<div>
+				<entry class="col-sm-6 col-md-3 col-lg-3 ">
+				  <player class="portfolio-item player">
+				    <img class="img-responsive playerclass" src="img/class/" alt="">
+				    <playername class="playername"></playername>
+				  </player>
+				</entry>
+			</div>
+		</memberlist>
+
+<!--
+    <div class="portfolio-items">
 
         <div class="col-sm-6 col-md-3 col-lg-3 druid">
           <div class="portfolio-item player">
@@ -144,6 +159,7 @@
         </div>
         
       </div>
+  -->
     </div>
   </div>
 </div>
@@ -160,7 +176,7 @@
 <script type="text/javascript" src="js/contact_me.js"></script> 
 <script type="text/javascript" src="js/main.js"></script>
 
-<!-- <div data-include="partials/scripts.html"></div> -->
+<div data-include="partials/scripts.html"></div>
 
 </body>
 </html>
