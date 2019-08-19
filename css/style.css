@@ -38,7 +38,7 @@ a:hover, a:focus {
 	color: #000;
 }
 ul, ol {
-	list-style: none;
+	list-style: disc;
 }
 .clearfix:after {
 	visibility: hidden;
