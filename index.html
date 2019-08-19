@@ -82,14 +82,14 @@
     <div class="row">
 
     	<memberlist class="portfolio-items">
-			<div>
-				<entry class="col-sm-6 col-md-3 col-lg-3 ">
+			<entry>
+				<div class="col-sm-6 col-md-3 col-lg-3 ">
 				  <player class="portfolio-item player">
 				    <img class="img-responsive playerclass" src="img/class/" alt="">
 				    <playername class="playername"></playername>
 				  </player>
-				</entry>
-			</div>
+				</div>
+			</entry>
 		</memberlist>
 
 <!--
@@ -188,9 +188,9 @@
       ]
    },
    directive = {
-      'div':{
+      'entry':{
         'member<-members':{
-          'entry@class+':'member.class',
+          'div@class+':'member.class',
           'playername':'member.name', 
           'img@src+': '#{member.class}.png', 
           'img@alt': 'member.klasse', 
