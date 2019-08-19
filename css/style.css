@@ -76,14 +76,11 @@ hr {
 /* Navigation */
 #nav {
 	z-index: 9999;
-	position: fixed;
-	width: 100%;
 }
 #nav.affix {
 	position: fixed;
 	top: 0;
 	width: 100%
-	z-index: 9999 !important;
 }
 .navbar .navbar-nav {
 	display: inline-block;
