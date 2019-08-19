@@ -199,9 +199,8 @@ header#header {
 	margin-top: 20px;
 }
 header .intro-text {
-	min-height: 1000px;
 	padding-top: 200px;
-	padding-bottom: 200px;
+	padding-bottom: 50px;
 }
 /* About Section */
 #about {
