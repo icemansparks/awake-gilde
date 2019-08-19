@@ -138,6 +138,18 @@ hr {
 	border-radius: 0;
 	margin-top: 20px;
 }
+.back-to-top {
+ text-transform: uppercase;
+	color: #fff;
+	background-color: transparent;
+	border-color: #455052;
+	background-color: #455052;
+	padding: 14px 20px;
+	margin: 0;
+	font-size: 16px;
+	border-radius: 0;
+	margin-top: 20px;
+}
 .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
 	color: #fff;
 	background-color: #121d1f;
