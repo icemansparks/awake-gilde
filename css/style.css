@@ -177,6 +177,9 @@ hr {
 	min-height: 100%;
     height: auto !important;
 }
+header#header {
+    display: contents;
+}
 .section-title.center {
 	padding: 10px 0 40px 0;
 }
