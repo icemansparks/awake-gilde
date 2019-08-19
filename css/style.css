@@ -245,9 +245,12 @@ header .intro-text {
 ul.cat li {
 	display: inline-block;
 }
+ol.type {
+	margin: 0;
+}
 ol.type li {
 	display: inline-block;
-	margin-left: 20px;
+	min-height: 40px;
 }
 ol.type li a {
 	border: 1px solid #777;
