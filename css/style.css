@@ -530,6 +530,8 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
     padding: .75rem;
     border-radius: 50%;
     float: left;
+    min-width: 64px;
+    min-height: 64px;
 }
 .playername {
     border-bottom: 1px solid #333;
