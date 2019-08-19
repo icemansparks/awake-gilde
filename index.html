@@ -176,7 +176,30 @@
 <script type="text/javascript" src="js/contact_me.js"></script> 
 <script type="text/javascript" src="js/main.js"></script>
 
-<div data-include="partials/scripts.html"></div>
+<!-- <div data-include="partials/scripts.html"></div> -->
+
+  <script>
+
+    var data = {
+      members:[
+        {name:'Tecc', class:'druid', klasse:'Druide'},
+        {name:'Sabra', class:'hunter', klasse:'Jäger'},
+        {name:'Blubb', class:'priest', klasse:'Priester'},
+      ]
+   },
+   directive = {
+      'div':{
+        'member<-members':{
+          'entry@class+':'member.class',
+          'playername':'member.name', 
+          'img@src+': '#{member.class}.png', 
+          'img@alt': 'member.klasse', 
+        }
+      }
+    };
+    $p( 'memberlist' ).render( data, directive );
+
+  </script>
 
 </body>
 </html>
