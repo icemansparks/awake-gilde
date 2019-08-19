@@ -109,13 +109,15 @@ hr {
 }
 .navbar-custom .nav li a:hover {
 	outline: 0;
-	color: #333;
+	text-decoration: underline;
+    color: #ccc;
 	background-color: transparent;
 }
 .navbar-custom .nav li a:focus, .navbar-custom .nav li a:active {
 	outline: 0;
 	background-color: transparent;
-	color: #333;
+	text-decoration: underline;
+    color: #ccc;
 }
 .navbar-custom .nav li.active {
 	outline: 0;
