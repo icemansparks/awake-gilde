@@ -124,14 +124,14 @@
           'playername':'member.name', 
           'img@src+': '#{member.class}.png', 
           'img@alt': 'member.klasse', 
-        }
-      },
-      sort: function(a, b){ // same kind of sort as the usual Array sort
+        },
+        sort: function(a, b){ // same kind of sort as the usual Array sort
 	      var cmp = function(x, y){ 
 	        return x > y? 1 : x < y ? -1 : 0;
 	      };
 	      return cmp( a.name, b.name );
 	    }
+      }
     };
     $p( '.memberlist' ).render( data, directive );
 
