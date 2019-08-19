@@ -190,6 +190,9 @@ header#header {
 	margin-bottom: 20px;
 	color: #d3d3d3;
 }
+.intro h2{
+	color: #d3d3d3;
+}
 .intro p {
 	font-size: 20px;
 	margin-bottom: 40px;
