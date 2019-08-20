@@ -550,7 +550,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
     margin: .125rem 0;
 }
 @media only screen and (min-width: 1200px) {
-	.playertitle {
+	.player {
 		margin-left: 20%;
 	}
 }
