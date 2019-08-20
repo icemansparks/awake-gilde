@@ -577,3 +577,8 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 		width: 120px;	
 	}
 }
+@media only screen and (max-width: 645px) {
+	.col-tn-12 {
+		width: 100%; 	
+	}
+}
