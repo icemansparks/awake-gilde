@@ -565,7 +565,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
     left: -100px;
     position: relative;
     width: 120px;	
-    clear: both;
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -575,6 +575,5 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 		left: 10px;
 		position: relative;
 		width: 120px;	
-		clear: both;
 	}
 }
