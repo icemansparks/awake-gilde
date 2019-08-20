@@ -534,6 +534,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
     border-radius: 50%;
     float: left;
     width: 63px;
+    margin: .125rem 0;
 }
 .playername {
     border-bottom: 1px solid #333;
@@ -544,7 +545,8 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
     font-weight: bold;
     width: 120px;
 }
-playertitle.playertitle {
+.playertitle {
+	float: left;
     top: 34px;
     left: -100px;
     position: relative;

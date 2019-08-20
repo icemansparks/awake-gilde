@@ -66,6 +66,7 @@
         <li>
           <ol class="type">
             <li><a href="#" data-filter="*" class="active">Alle</a></li>
+            <li><a href="#" data-filter="*leiter">Klassenleiter</a></li>
             <li><a href="#" data-filter=".druid">Druiden</a></li>
             <li><a href="#" data-filter=".warlock">Hexenmeister</a></li>
             <li><a href="#" data-filter=".hunter">Jäger</a></li>
@@ -182,7 +183,7 @@
    directive = {
       'div':{
         'member<-members':{
-          '@class+':'member.class',
+          '@class+':'#{member.class} #{member.title}',
           'playername':'member.name', 
           'playertitle':'member.title', 
           'img@src+': '#{member.class}.png', 
