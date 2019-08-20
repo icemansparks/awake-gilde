@@ -5,4 +5,4 @@ Dieses Repo ist basis für die Gilden Homepage der Gilde Awake auf dem deutschen
 https://www.awake-gilde.de
 
 
-Wenn Du mir eine Tasse Kaffee spendieren willst nehme ich diese gerne über PayPal entgegen: https://paypal.me/DennisHerrmann?locale.x=de_DE
+Wenn Du mir eine Tasse Kaffee spendieren willst nehme ich diese gerne über PayPal entgegen: https://paypal.me/DennisHerrmann
