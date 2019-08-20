@@ -206,8 +206,15 @@ hr {
   content: '';
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
-  box-shadow: inset 0px 0px 1000px black;
+  box-shadow: inset 0px 0px 100px black;
 }
+
+@media only screen and (min-width: 1000px) {
+	.intro:after {
+	  box-shadow: inset 0px 0px 1000px black;
+	}
+}
+
 header#header {
     display: contents;
 }
