@@ -549,6 +549,11 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
     width: 63px;
     margin: .125rem 0;
 }
+@media only screen and (min-width: 1200px) {
+	.playertitle {
+		margin-left: 20%;
+	}
+}
 .playername {
     border-bottom: 1px solid #333;
     padding-top: 1rem;
