@@ -156,7 +156,6 @@
 <!-- footer -->
 <div data-include="partials/footer.html"></div>
 
-
 <script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
 <script type="text/javascript" src="js/bootstrap.js"></script> 
 <script type="text/javascript" src="js/nivo-lightbox.js"></script> 
@@ -165,79 +164,118 @@
 <script type="text/javascript" src="js/contact_me.js"></script> 
 <script type="text/javascript" src="js/main.js"></script>
 
-<!-- <div data-include="partials/scripts.html"></div> -->
+<script>
 
-  <script>
+	var data2 = {
+	recruitment:[
+	    {class:'druid',		klasse:'Druide', 		spec:'- Wiederherstellung', 	status:'Mittel'},
+	    {class:'druid',		klasse:'Druide', 		spec:'- Wilder Kampf', 			status:'Mittel'},
 
-    var data = {
-    members:[
-        {name:'Tecc', 			class:'druid', 		klasse:'Druide', 		title:'Klassenleitung',	council:''},
-        {name:'Jayjojane', 		class:'druid', 		klasse:'Druide', 		title:'', 				council:''},
-        {name:'Tecsumo', 		class:'druid', 		klasse:'Druide', 		title:'', 				council:''},
-        {name:'Wuusaa', 		class:'druid', 		klasse:'Druide', 		title:'', 				council:''},
+	    {class:'hunter', 	klasse:'Jäger', 		spec:'', 						status:'Geschlossen'},
 
-        {name:'Mylinaa', 		class:'warlock', 	klasse:'Hexenmeister', 	title:'', 				council:''},
-        {name:'Jnayo', 			class:'warlock', 	klasse:'Hexenmeister', 	title:'', 				council:''},
-        {name:'Amqa', 			class:'warlock', 	klasse:'Hexenmeister', 	title:'', 				council:''},
-        {name:'Demodan', 		class:'warlock', 	klasse:'Hexenmeister', 	title:'Klassenleitung', council:''},
+	    {class:'warrior',	klasse:'Krieger', 		spec:'- Schutz',				status:'Geschlossen'},
+	    {class:'warrior',	klasse:'Krieger', 		spec:'- Furor', 				status:'Geschlossen'},
 
-        {name:'Sabra', 			class:'hunter', 	klasse:'Jäger', 		title:'Klassenleitung',	council:''},
-        {name:'Nteg', 			class:'hunter', 	klasse:'Jäger', 		title:'', 				council:''},
-        {name:'Mattes', 		class:'hunter', 	klasse:'Jäger', 		title:'', 				council:''},
-        {name:'Pennywíse', 		class:'hunter', 	klasse:'Jäger', 		title:'', 				council:''},
-        {name:'Syqenesa', 		class:'hunter', 	klasse:'Jäger', 		title:'', 				council:''},
+	    {class:'warlock', 	klasse:'Hexenmeister',	spec:'', 						status:'Niedrig'},
 
-        {name:'Githir', 		class:'priest', 	klasse:'Priester', 		title:'Klassenleitung',	council:'Gildenrat'},
-        {name:'Draykiss', 		class:'priest', 	klasse:'Priester', 		title:'',				council:''},
-        {name:'Mysocks', 		class:'priest', 	klasse:'Priester', 		title:'', 				council:''},
-        {name:'Alessra', 		class:'priest', 	klasse:'Priester', 		title:'', 				council:''},
-        {name:'Magier', 		class:'priest', 	klasse:'Priester', 		title:'', 				council:''},
-        {name:'Azadun', 		class:'priest', 	klasse:'Priester', 		title:'', 				council:''},
-        {name:'Fragstar', 		class:'priest', 	klasse:'Priester', 		title:'', 				council:''},
-        {name:'Yakuhl', 		class:'priest', 	klasse:'Priester', 		title:'', 				council:''},
+	    {class:'mage', 		klasse:'Magier', 		spec:'', 						status:'Geschlossen'},
 
-        {name:'Serenetas', 		class:'warrior', 	klasse:'Krieger', 		title:'Klassenleitung', council:'Gildenleitung'},
-        {name:'Montrocity', 	class:'warrior', 	klasse:'Krieger', 		title:'', 				council:''},
-        {name:'Drölf', 			class:'warrior', 	klasse:'Krieger', 		title:'', 				council:''},
-        {name:'Semibah', 		class:'warrior', 	klasse:'Krieger', 		title:'', 				council:''},
-        {name:'Fuzzie', 		class:'warrior', 	klasse:'Krieger', 		title:'', 				council:''},
-        {name:'Jizzer', 		class:'warrior', 	klasse:'Krieger', 		title:'', 				council:''},
-        {name:'Jadda', 			class:'warrior', 	klasse:'Krieger', 		title:'', 				council:''},
-        {name:'Nehek', 			class:'warrior', 	klasse:'Krieger', 		title:'', 				council:''},
-        {name:'Firefistace', 	class:'warrior', 	klasse:'Krieger', 		title:'', 				council:''},
-        {name:'Ahyraz', 		class:'warrior', 	klasse:'Krieger', 		title:'', 				council:''},
+	    {class:'priest', 	klasse:'Priester', 		spec:'- Heilig / Disciplin', 	status:'Niedrig'},
+	    {class:'priest', 	klasse:'Priester', 		spec:'- Schatten', 				status:'Geschlossen'},
 
-        {name:'Kenzo', 			class:'mage', 		klasse:'Magier', 		title:'Klassenleitung', council:'Gildenrat'},
-        {name:'Stonerdays', 	class:'mage', 		klasse:'Magier', 		title:'', 				council:''},
-        {name:'Costadamus', 	class:'mage', 		klasse:'Magier', 		title:'', 				council:''},
-        {name:'Hagur', 			class:'mage', 		klasse:'Magier', 		title:'', 				council:''},
-        {name:'Birds', 			class:'mage', 		klasse:'Magier', 		title:'', 				council:''},
-        {name:'Kaelte', 		class:'mage', 		klasse:'Magier', 		title:'', 				council:''},
-        {name:'Raya', 			class:'mage', 		klasse:'Magier', 		title:'', 				council:''},
-        {name:'Stony', 			class:'mage', 		klasse:'Magier', 		title:'', 				council:''},
+	    {class:'shaman', 	klasse:'Schamane', 		spec:'- Wiederherstellung', 	status:'Mittel'},
 
-        {name:'Rrim', 			class:'rogue', 		klasse:'Schurke', 		title:'PvP-Leitung', 	council:'Gildenrat'},
-        {name:'Colâ', 			class:'rogue', 		klasse:'Schurke', 		title:'Klassenleitung', council:''},
-        {name:'Camou', 			class:'rogue', 		klasse:'Schurke', 		title:'', 				council:''},
-        {name:'Tedo', 			class:'rogue', 		klasse:'Schurke', 		title:'', 				council:'Gildenrat'},
-        {name:'Lola', 			class:'rogue', 		klasse:'Schurke', 		title:'', 				council:''},
-        {name:'Criz', 			class:'rogue', 		klasse:'Schurke', 		title:'', 				council:''},
-        {name:'Necari', 		class:'rogue', 		klasse:'Schurke', 		title:'', 				council:''},
-        {name:'Kankra', 		class:'rogue', 		klasse:'Schurke', 		title:'', 				council:''},
-        {name:'Yezui', 			class:'rogue', 		klasse:'Schurke', 		title:'', 				council:''},
+	    {class:'rogue', 	klasse:'Schurke', 		spec:'', 						status:'Geschlossen'},
+	]
+	},
+	directive2 = {
+	    'recruitment':{
+	        'recruit<-recruitment':{
+	          'img@src':'img/class/#{recruit.class}.png',
+	          'recruit_status@class+':'recruit.status',
+	          'recruit_status':'recruit.status',
+	          'recruit_klasse':'recruit.klasse',
+	          'recruit_spec':'#{recruit.spec}',
+	        },
+	        sort: function(a, b){ // same kind of sort as the usual Array sort
+		      var cmp = function(x, y){ 
+		        return x > y? 1 : x < y ? -1 : 0;
+		      };
+		      return cmp( a.name, b.name );
+		    }
+	    }
+	};
+	$p( '.recruitment' ).render( data2, directive2 );
 
-        {name:'Vîtas', 			class:'shaman', 	klasse:'Schamane', 		title:'', 				council:''},
-        {name:'Moshkopp', 		class:'shaman', 	klasse:'Schamane', 		title:'', 				council:''},
-        {name:'Aiurs', 			class:'shaman', 	klasse:'Schamane', 		title:'Klassenleitung', council:'Gildenrat'},
-        {name:'Stribbe', 		class:'shaman', 	klasse:'Schamane', 		title:'', 				council:''},
-        {name:'Berto', 			class:'shaman', 	klasse:'Schamane', 		title:'', 				council:''},
-        {name:'Leif', 			class:'shaman', 	klasse:'Schamane', 		title:'', 				council:''},
-        {name:'Strygwyr', 		class:'shaman', 	klasse:'Schamane', 		title:'', 				council:''},
-        {name:'Deadwood', 		class:'shaman', 	klasse:'Schamane', 		title:'', 				council:''},
-        {name:'Unomemes', 		class:'shaman', 	klasse:'Schamane', 		title:'', 				council:''},
-      ]
-   	},
-   	directive = {
+	var data = {
+	members:[
+	    {name:'Tecc', 			class:'druid', 		klasse:'Druide', 		title:'Klassenleitung',	council:''},
+	    {name:'Jayjojane', 		class:'druid', 		klasse:'Druide', 		title:'', 				council:''},
+	    {name:'Tecsumo', 		class:'druid', 		klasse:'Druide', 		title:'', 				council:''},
+	    {name:'Wuusaa', 		class:'druid', 		klasse:'Druide', 		title:'', 				council:''},
+
+	    {name:'Mylinaa', 		class:'warlock', 	klasse:'Hexenmeister', 	title:'', 				council:''},
+	    {name:'Jnayo', 			class:'warlock', 	klasse:'Hexenmeister', 	title:'', 				council:''},
+	    {name:'Amqa', 			class:'warlock', 	klasse:'Hexenmeister', 	title:'', 				council:''},
+	    {name:'Demodan', 		class:'warlock', 	klasse:'Hexenmeister', 	title:'Klassenleitung', council:''},
+
+	    {name:'Sabra', 			class:'hunter', 	klasse:'Jäger', 		title:'Klassenleitung',	council:''},
+	    {name:'Nteg', 			class:'hunter', 	klasse:'Jäger', 		title:'', 				council:''},
+	    {name:'Mattes', 		class:'hunter', 	klasse:'Jäger', 		title:'', 				council:''},
+	    {name:'Pennywíse', 		class:'hunter', 	klasse:'Jäger', 		title:'', 				council:''},
+	    {name:'Syqenesa', 		class:'hunter', 	klasse:'Jäger', 		title:'', 				council:''},
+
+	    {name:'Githir', 		class:'priest', 	klasse:'Priester', 		title:'Klassenleitung',	council:'Gildenrat'},
+	    {name:'Draykiss', 		class:'priest', 	klasse:'Priester', 		title:'',				council:''},
+	    {name:'Mysocks', 		class:'priest', 	klasse:'Priester', 		title:'', 				council:''},
+	    {name:'Alessra', 		class:'priest', 	klasse:'Priester', 		title:'', 				council:''},
+	    {name:'Magier', 		class:'priest', 	klasse:'Priester', 		title:'', 				council:''},
+	    {name:'Azadun', 		class:'priest', 	klasse:'Priester', 		title:'', 				council:''},
+	    {name:'Fragstar', 		class:'priest', 	klasse:'Priester', 		title:'', 				council:''},
+	    {name:'Yakuhl', 		class:'priest', 	klasse:'Priester', 		title:'', 				council:''},
+
+	    {name:'Serenetas', 		class:'warrior', 	klasse:'Krieger', 		title:'Klassenleitung', council:'Gildenleitung'},
+	    {name:'Montrocity', 	class:'warrior', 	klasse:'Krieger', 		title:'', 				council:''},
+	    {name:'Drölf', 			class:'warrior', 	klasse:'Krieger', 		title:'', 				council:''},
+	    {name:'Semibah', 		class:'warrior', 	klasse:'Krieger', 		title:'', 				council:''},
+	    {name:'Fuzzie', 		class:'warrior', 	klasse:'Krieger', 		title:'', 				council:''},
+	    {name:'Jizzer', 		class:'warrior', 	klasse:'Krieger', 		title:'', 				council:''},
+	    {name:'Jadda', 			class:'warrior', 	klasse:'Krieger', 		title:'', 				council:''},
+	    {name:'Nehek', 			class:'warrior', 	klasse:'Krieger', 		title:'', 				council:''},
+	    {name:'Firefistace', 	class:'warrior', 	klasse:'Krieger', 		title:'', 				council:''},
+	    {name:'Ahyraz', 		class:'warrior', 	klasse:'Krieger', 		title:'', 				council:''},
+
+	    {name:'Kenzo', 			class:'mage', 		klasse:'Magier', 		title:'Klassenleitung', council:'Gildenrat'},
+	    {name:'Stonerdays', 	class:'mage', 		klasse:'Magier', 		title:'', 				council:''},
+	    {name:'Costadamus', 	class:'mage', 		klasse:'Magier', 		title:'', 				council:''},
+	    {name:'Hagur', 			class:'mage', 		klasse:'Magier', 		title:'', 				council:''},
+	    {name:'Birds', 			class:'mage', 		klasse:'Magier', 		title:'', 				council:''},
+	    {name:'Kaelte', 		class:'mage', 		klasse:'Magier', 		title:'', 				council:''},
+	    {name:'Raya', 			class:'mage', 		klasse:'Magier', 		title:'', 				council:''},
+	    {name:'Stony', 			class:'mage', 		klasse:'Magier', 		title:'', 				council:''},
+
+	    {name:'Rrim', 			class:'rogue', 		klasse:'Schurke', 		title:'PvP-Leitung', 	council:'Gildenrat'},
+	    {name:'Colâ', 			class:'rogue', 		klasse:'Schurke', 		title:'Klassenleitung', council:''},
+	    {name:'Camou', 			class:'rogue', 		klasse:'Schurke', 		title:'', 				council:''},
+	    {name:'Tedo', 			class:'rogue', 		klasse:'Schurke', 		title:'', 				council:'Gildenrat'},
+	    {name:'Lola', 			class:'rogue', 		klasse:'Schurke', 		title:'', 				council:''},
+	    {name:'Criz', 			class:'rogue', 		klasse:'Schurke', 		title:'', 				council:''},
+	    {name:'Necari', 		class:'rogue', 		klasse:'Schurke', 		title:'', 				council:''},
+	    {name:'Kankra', 		class:'rogue', 		klasse:'Schurke', 		title:'', 				council:''},
+	    {name:'Yezui', 			class:'rogue', 		klasse:'Schurke', 		title:'', 				council:''},
+
+	    {name:'Vîtas', 			class:'shaman', 	klasse:'Schamane', 		title:'', 				council:''},
+	    {name:'Moshkopp', 		class:'shaman', 	klasse:'Schamane', 		title:'', 				council:''},
+	    {name:'Aiurs', 			class:'shaman', 	klasse:'Schamane', 		title:'Klassenleitung', council:'Gildenrat'},
+	    {name:'Stribbe', 		class:'shaman', 	klasse:'Schamane', 		title:'', 				council:''},
+	    {name:'Berto', 			class:'shaman', 	klasse:'Schamane', 		title:'', 				council:''},
+	    {name:'Leif', 			class:'shaman', 	klasse:'Schamane', 		title:'', 				council:''},
+	    {name:'Strygwyr', 		class:'shaman', 	klasse:'Schamane', 		title:'', 				council:''},
+	    {name:'Deadwood', 		class:'shaman', 	klasse:'Schamane', 		title:'', 				council:''},
+	    {name:'Unomemes', 		class:'shaman', 	klasse:'Schamane', 		title:'', 				council:''},
+	  ]
+		},
+		directive = {
 	    'div':{
 	        'member<-members':{
 	          '@class+':'#{member.class} #{member.title} #{member.council}',
@@ -254,45 +292,10 @@
 		      return cmp( a.name, b.name );
 		    }
 	      }
-    };
-    $p( '.memberlist' ).render( data, directive );
+	};
+	$p( '.memberlist' ).render( data, directive );
 
-
-    var data2 = {
-	recruitment:[
-        {class:'druid',		klasse:'Druide', 		spec:'- Wiederherstellung', 	status:'Mittel'},
-        {class:'druid',		klasse:'Druide', 		spec:'- Wilder Kampf', 			status:'Mittel'},
-        {class:'hunter', 	klasse:'Jäger', 		spec:'', 						status:'Geschlossen'},
-        {class:'warrior',	klasse:'Krieger', 		spec:'- Schutz',				status:'Geschlossen'},
-        {class:'warrior',	klasse:'Krieger', 		spec:'- Furor', 				status:'Geschlossen'},
-        {class:'warlock', 	klasse:'Hexenmeister',	spec:'', 						status:'Niedrig'},
-        {class:'mage', 		klasse:'Magier', 		spec:'', 						status:'Geschlossen'},
-        {class:'priest', 	klasse:'Priester', 		spec:'- Heilig / Disciplin', 	status:'Niedrig'},
-        {class:'priest', 	klasse:'Priester', 		spec:'- Schattenn', 			status:'Geschlossen'},
-        {class:'shaman', 	klasse:'Schamane', 		spec:'- Wiederherstellung', 	status:'Mittel'},
-        {class:'rogue', 	klasse:'Schurke', 		spec:'', 						status:'Geschlossen'},
-    ]
-    },
-    directive2 = {
-	    'recruitment':{
-	        'recruit<-recruitment':{
-	          'img@src':'img/class/#{recruit.class}.png',
-	          'recruit_status@class+':'recruit.status',
-	          'recruit_status':'recruit.status',
-	          'recruit_klasse':'recruit.klasse',
-	          'recruit_spec':'#{recruit.spec}',
-	        },
-	        sort: function(a, b){ // same kind of sort as the usual Array sort
-		      var cmp = function(x, y){ 
-		        return x > y? 1 : x < y ? -1 : 0;
-		      };
-		      return cmp( a.name, b.name );
-		    }
-	    }
-    };
-    $p( '.recruitment' ).render( data2, directive2 );
-
-  </script>
+</script>
 
 </body>
 </html>
