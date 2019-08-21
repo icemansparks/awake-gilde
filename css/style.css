@@ -586,8 +586,9 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 
 }
 .playercouncil {
-
-
+	top: 2px;
+    left: 10px;
+    position: relative;
 }
 
 @media only screen and (min-width: 768px) {
