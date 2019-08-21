@@ -80,15 +80,13 @@
 					<div class="divTableCell divTableHead">Status</div>
 				</div>
 
-				<recruitment>
-					<div class="divTableRow">
-						<recruit class="divTableCell">
-							<img src="" class="img-responsive"> 
-							<recruit_klasse></recruit_klasse>
-							<recruit_spec></recruit_spec>
-						</recruit>
-						<recruit_status class="divTableCell color_"></recruit_status>
-					</div>
+				<recruitment class="divTableRow">
+					<recruit class="divTableCell">
+						<img src="" class="img-responsive"> 
+						<recruit_klasse></recruit_klasse>
+						<recruit_spec></recruit_spec>
+					</recruit>
+					<recruit_status class="divTableCell color_"></recruit_status>
       			</recruitment>
 
             </div>
@@ -266,17 +264,17 @@
 
     var data2 = {
 	recruitment:[
-        {class:'druid',		klasse:'Druide', 		spec:'Wiederherstellung', 	status:'Mittel'},
-        {class:'druid',		klasse:'Druide', 		spec:'Wilder Kampf', 		status:'Mittel'},
-        {class:'hunter', 	klasse:'Jäger', 		spec:'', 					status:'Geschlossen'},
-        {class:'warrior',	klasse:'Krieger', 		spec:'Schutz',				status:'Geschlossen'},
-        {class:'warrior',	klasse:'Krieger', 		spec:'Furor', 				status:'Geschlossen'},
-        {class:'warlock', 	klasse:'Hexenmeister',	spec:'', 					status:'Niedrig'},
-        {class:'mage', 		klasse:'Magier', 		spec:'', 					status:'Geschlossen'},
-        {class:'priest', 	klasse:'Priester', 		spec:'Heilig / Disciplin', 	status:'Niedrig'},
-        {class:'priest', 	klasse:'Priester', 		spec:'Schattenn', 			status:'Geschlossen'},
-        {class:'shaman', 	klasse:'Schamane', 		spec:'Wiederherstellung', 	status:'Mittel'},
-        {class:'rogue', 	klasse:'Schurke', 		spec:'', 					status:'Geschlossen'},
+        {class:'druid',		klasse:'Druide', 		spec:'- Wiederherstellung', 	status:'Mittel'},
+        {class:'druid',		klasse:'Druide', 		spec:'- Wilder Kampf', 			status:'Mittel'},
+        {class:'hunter', 	klasse:'Jäger', 		spec:'', 						status:'Geschlossen'},
+        {class:'warrior',	klasse:'Krieger', 		spec:'- Schutz',				status:'Geschlossen'},
+        {class:'warrior',	klasse:'Krieger', 		spec:'- Furor', 				status:'Geschlossen'},
+        {class:'warlock', 	klasse:'Hexenmeister',	spec:'', 						status:'Niedrig'},
+        {class:'mage', 		klasse:'Magier', 		spec:'', 						status:'Geschlossen'},
+        {class:'priest', 	klasse:'Priester', 		spec:'- Heilig / Disciplin', 	status:'Niedrig'},
+        {class:'priest', 	klasse:'Priester', 		spec:'- Schattenn', 			status:'Geschlossen'},
+        {class:'shaman', 	klasse:'Schamane', 		spec:'- Wiederherstellung', 	status:'Mittel'},
+        {class:'rogue', 	klasse:'Schurke', 		spec:'', 						status:'Geschlossen'},
     ]
     },
     directive2 = {
@@ -286,7 +284,7 @@
 	          'recruit_status@class+':'recruit.status',
 	          'recruit_status':'recruit.status',
 	          'recruit_klasse':'recruit.klasse',
-	          'recruit_spec':'- #{recruit.spec}',
+	          'recruit_spec':'#{recruit.spec}',
 	        },
 	        sort: function(a, b){ // same kind of sort as the usual Array sort
 		      var cmp = function(x, y){ 
