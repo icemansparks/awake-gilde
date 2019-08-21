@@ -569,9 +569,8 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 .playername {
     border-bottom: 1px solid #333;
-    padding-top: 1rem;
     margin-left: -1rem;
-    padding: 1rem 1rem 0 2rem;
+    padding: 0rem 1rem 0 2rem;
     float: left;
     font-weight: bold;
     width: 120px;
