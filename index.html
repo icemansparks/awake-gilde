@@ -176,16 +176,6 @@
   <script>
 
     var data = {
-    recruitment:[
-        {class:'druid',		klasse:'Druide', 		spec:'Wiederherstellung', status:'Mittel'},
-        {class:'hunter', 	klasse:'Jäger', 		spec:'Wiederherstellung', status:'Mittel'},
-        {class:'warrior',	klasse:'Krieger', 		spec:'Wiederherstellung', status:'Mittel'},
-        {class:'warlock', 	klasse:'Hexenmeister',	spec:'Wiederherstellung', status:'Mittel'},
-        {class:'mage', 		klasse:'Magier', 		spec:'Wiederherstellung', status:'Mittel'},
-        {class:'priest', 	klasse:'Priester', 		spec:'Wiederherstellung', status:'Mittel'},
-        {class:'shaman', 	klasse:'Schamane', 		spec:'Wiederherstellung', status:'Mittel'},
-        {class:'rogue', 	klasse:'Schurke', 		spec:'Wiederherstellung', status:'Mittel'},
-    ],
     members:[
         {name:'Tecc', 			class:'druid', 		klasse:'Druide', 		title:'Klassenleitung',	council:''},
         {name:'Jayjojane', 		class:'druid', 		klasse:'Druide', 		title:'', 				council:''},
@@ -269,16 +259,37 @@
 		      };
 		      return cmp( a.name, b.name );
 		    }
-	      },
+	      }
+    };
+    $p( '.memberlist' ).render( data, directive );
+
+
+    var data2 = {
+	recruitment:[
+        {class:'druid',		klasse:'Druide', 		spec:'Wiederherstellung', status:'Mittel'},
+        {class:'hunter', 	klasse:'Jäger', 		spec:'Wiederherstellung', status:'Mittel'},
+        {class:'warrior',	klasse:'Krieger', 		spec:'Wiederherstellung', status:'Mittel'},
+        {class:'warlock', 	klasse:'Hexenmeister',	spec:'Wiederherstellung', status:'Mittel'},
+        {class:'mage', 		klasse:'Magier', 		spec:'Wiederherstellung', status:'Mittel'},
+        {class:'priest', 	klasse:'Priester', 		spec:'Wiederherstellung', status:'Mittel'},
+        {class:'shaman', 	klasse:'Schamane', 		spec:'Wiederherstellung', status:'Mittel'},
+        {class:'rogue', 	klasse:'Schurke', 		spec:'Wiederherstellung', status:'Mittel'},
+    ]
+    },
+    directive2 = {
 	    'recruitment':{
 	        'recruit<-recruitment':{
 	          'recruit_status@class+':'recruit.status',
 	        },
+	        sort: function(a, b){ // same kind of sort as the usual Array sort
+		      var cmp = function(x, y){ 
+		        return x > y? 1 : x < y ? -1 : 0;
+		      };
+		      return cmp( a.name, b.name );
+		    }
 	    }
     };
-    $p( '.memberlist' ).render( data, directive );
-
-    $p( '.recruitment' ).render( data, directive );
+    $p( '.recruitment' ).render( data2, directive2 );
 
   </script>
 
