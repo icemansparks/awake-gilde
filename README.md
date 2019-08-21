@@ -17,9 +17,9 @@ Hierzu muss lediglich der folgende Part angepasst werden:
 
 ```javascript
 var data2 = {
-	recruitment:[
-	    {class:'druid',	klasse:'Druide', spec:'- Wiederherstellung', status:'Mittel'},
-	    ...
+ recruitment:[
+  {class:'druid', klasse:'Druide', spec:'- Wiederherstellung', status:'Mittel'},
+  ...
 ```
 
 ### Mitgliederliste / Rooster anpassen
@@ -29,8 +29,8 @@ Die Daten für die Mitgliederliste befinden sich ebenfalls in der index.html Dat
 Hierzu muss lediglich der folgende Part angepasst werden:
 
 ```javascript
-	var data = {
-	members:[
-	    {name:'Charaktername', class:'priest', klasse:'Priester', title:'Klassenleitung', council:'Gildenrat'},
-	    ...
+var data = {
+ members:[
+  {name:'Charaktername', class:'priest', klasse:'Priester', title:'Klassenleitung', council:'Gildenrat'},
+  ...
 ```
