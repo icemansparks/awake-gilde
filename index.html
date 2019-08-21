@@ -88,7 +88,10 @@
 			  <player class="portfolio-item player">
 			    <img class="img-responsive playerclass" src="img/class/" alt="">
 			    <playername class="playername"></playername>
-			    <playertitle class="playertitle"></playername>
+			    <playertitles class="playertitles">
+			    	<playertitle class="playertitle"></playertitle>
+			    	<playercouncil class="playercouncil"></playercouncil>
+				</playertitles>
 			  </player>
 			</div>
 		</div>
@@ -187,6 +190,7 @@
           '@class+':'#{member.class} #{member.title} #{member.council}',
           'playername':'member.name', 
           'playertitle':'member.title', 
+          'playercouncil':'member.council', 
           'img@src+': '#{member.class}.png', 
           'img@alt': 'member.klasse', 
         },
