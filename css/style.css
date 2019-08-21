@@ -497,7 +497,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 /* recruitment table */
 .divTable{
 	display: table;
-	width: 300px;
+	width: 400px;
 	text-align: left;
     margin: 0 auto;
 }
