@@ -526,20 +526,20 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	display: table-row-group;
 }
 
-.color_closed{
+.color_Geschlossen{
 	color: #7f8c8d;
 }
-.color_low{
+.color_Niedrig{
 	color: #c0392b;
 }
-.color_medium{
+.color_Mittel{
 	color: #f1c40f;
 }
-.color_open{
+.color_Offen{
 	color: #2ecc71;
 }
 
-.color_closed, .color_low, .color_medium, .color_open{
+.color_Geschlossen, .color_Niedrig, .color_Mittel, .color_Offen{
 	font-weight: bold;
 	text-align: center;
 }
