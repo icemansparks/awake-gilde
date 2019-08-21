@@ -550,7 +550,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 
 .player{
-	margin: .5rem 0;
+	margin: 1rem 0;
     float: left;
 }
 
