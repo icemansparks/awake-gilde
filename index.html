@@ -145,7 +145,7 @@
 		<div class="portfolio-items memberlist">
 			<div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-3 ">
 			  <player class="portfolio-item player">
-			    <img class="img-responsive playerclass" src="img/class/" alt="">
+			    <img class="img-responsive playerclass" src="" alt="">
 			    <playername class="playername"></playername>
 			    <playertitles class="playertitles">
 			    	<playercouncil class="playercouncil"></playercouncil>
@@ -250,7 +250,7 @@
 	          'playername':'member.name', 
 	          'playertitle':'member.title', 
 	          'playercouncil':'member.council', 
-	          'img@src+': '#{member.class}.png', 
+	          'img@src': 'img/class/#{member.class}.png', 
 	          'img@alt': 'member.klasse', 
 	        },
 	        sort: function(a, b){ // same kind of sort as the usual Array sort
@@ -279,7 +279,7 @@
     directive2 = {
 	    'recruitment':{
 	        'recruit<-recruitment':{
-	          'img@src':'img/class/#{recruit.class}',
+	          'img@src':'img/class/#{recruit.class}.png',
 	          'recruit_status@class+':'recruit.status',
 	        },
 	        sort: function(a, b){ // same kind of sort as the usual Array sort
