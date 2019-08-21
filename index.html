@@ -83,7 +83,7 @@
 				<recruitment>
 					<div class="divTableRow">
 						<recruit class="divTableCell">
-							<img src="img/class/" class="img-responsive"> 
+							<img src="" class="img-responsive"> 
 							<recruit_klasse></recruit_klasse>
 							- <recruit_spec></recruit_spec>
 						</div>
@@ -279,6 +279,7 @@
     directive2 = {
 	    'recruitment':{
 	        'recruit<-recruitment':{
+	          'img@src':'img/class/#{recruit.class}',
 	          'recruit_status@class+':'recruit.status',
 	        },
 	        sort: function(a, b){ // same kind of sort as the usual Array sort
