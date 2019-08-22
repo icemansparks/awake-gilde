@@ -604,6 +604,18 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
     margin: 15rem 0;
 }
 
+.raidprogress_image{
+	/* border-radius: 50%; */
+    max-width: 180px;
+    height: 180px;
+    margin-bottom: 3rem;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    -webkit-mask-image: radial-gradient(ellipse 85% 76% at 50% 60%, black 42%, transparent 52%);
+    mask-image: radial-gradient(ellipse 90% 80% at 48% 78%, black 40%, transparent 50%);
+}
+}
+
 .raid_name {
     font-size: 3rem;
     color: #555;
@@ -675,3 +687,5 @@ encounter {
     border-radius: .25rem;
     margin-bottom: .5rem;
 }
+
+
