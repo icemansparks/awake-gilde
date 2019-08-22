@@ -201,12 +201,7 @@ hr {
 	-o-background-size: cover;
 	min-height: 100%;
     height: auto !important;
-}
-.intro:after {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-  box-shadow: inset 0px 0px 100px black;
+    box-shadow: inset 0px 0px 100px black;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -603,4 +598,8 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	.col-tn-12 {
 		width: 100%; 	
 	}
+}
+
+.raidprogress {
+    margin: 15rem 0;
 }
