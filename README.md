@@ -5,7 +5,13 @@ Dieses Repo ist basis für die Gilden Homepage der Gilde Awake auf dem deutschen
 https://www.awake-gilde.de
 
 
+
 Wenn Du mir eine Tasse Kaffee spendieren willst nehme ich diese gerne über PayPal entgegen: https://paypal.me/DennisHerrmann
+
+
+### Anleitung zur Mitarbeit
+
+https://help.github.com/en/articles/editing-files-in-your-repository
 
 
 
@@ -20,7 +26,8 @@ var data2 = {
  recruitment:[
   {class:'druid', klasse:'Druide', spec:'- Wiederherstellung', status:'Mittel'},
   ...
-```
+````
+
 
 ### Mitgliederliste / Rooster anpassen
 
