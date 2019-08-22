@@ -83,21 +83,22 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
       	<h3 class="raid_name">zusammenfassung für den raid progress - Onyxia</h3>
-	      <onyxia class="divTable">
-	        <div class="divTableBody">
-						<div class="divTableRow">
-							<boss class="divTableCell">
-								<img src="" class="img-responsive boss_image">
-								<div class="boss_details"> 
-									<encounter></encounter>	
-									<percent></percent>
-									<killdate></killdate>
-									<killcount></killcount>
-									<killtime></killtime>
-								</div>
-							</boss>
-	  				</div>
-	        </div>
+	      
+	      <onyxia class="encounter_list">
+					<boss class="encounter_entry">
+						<div class="boss_portrait col-xs-4">
+							<img src="" class="img-responsive boss_image">
+						  <percent class="progress">
+								<div class="progress-bar" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+							</percent>
+						</div>
+						<div class="boss_details col-xs-8"> 
+							<encounter></encounter>	
+							<killdate></killdate>
+							<killcount></killcount>
+							<killtime></killtime>
+						</div>
+					</boss>
 	      </onyxia>
 
       </div>
@@ -106,22 +107,23 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
       	<h3 class="raid_name">zusammenfassung für den raid progress - Molten Core</h3>
-        <moltencore class="divTable">
-            <div class="divTableBody">
-							<div class="divTableRow">
-								<boss class="divTableCell">
-									<img src="" class="img-responsive boss_image">
-									<div class="boss_details"> 
-										<encounter></encounter>	
-										<percent></percent>
-										<killdate></killdate>
-										<killcount></killcount>
-										<killtime></killtime>
-									</div>
-								</boss>
-      				</div>
-            </div>
-        </moltencore>
+
+				<moltencore class="encounter_list">
+					<boss class="encounter_entry">
+						<div class="boss_portrait col-xs-4">
+							<img src="" class="img-responsive boss_image">
+						  <percent class="progress">
+								<div class="progress-bar" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+							</percent>
+						</div>
+						<div class="boss_details col-xs-8"> 
+							<encounter></encounter>	
+							<killdate></killdate>
+							<killcount></killcount>
+							<killtime></killtime>
+						</div>
+					</boss>
+				</moltencore>
 
       </div>
     </div>
@@ -152,27 +154,29 @@
 	//Content for Raid Progress
 	var raids = {
 		onyxia:[
-		    {name:'Onyxia', 									percent:'100%', killdate:'02.10.19', 	killcount:'2', killtime:'00:23:15', image:'onyxia.png'},
+		    {name:'Onyxia', 									percent:'100', killdate:'02.10.19', 	killcount:'2', killtime:'00:23:15', image:'onyxia.png'},
 		],
 		moltencore:[
-		    {name:'Lucifron', 								percent:'10%', 	killdate:'', 					killcount:'0', killtime:'', 				image:'lucifron.png'},
-		    {name:'Magmadar', 								percent:'15%', 	killdate:'', 					killcount:'0', killtime:'', 				image:'magmadar.png'},
-		    {name:'Gehennas', 								percent:'15%', 	killdate:'', 					killcount:'0', killtime:'', 				image:'gehennas.png'},
-		    {name:'Garr', 										percent:'15%', 	killdate:'', 					killcount:'0', killtime:'', 				image:'garr.png'},
-		    {name:'Shazzrah', 								percent:'15%', 	killdate:'', 					killcount:'0', killtime:'', 				image:'shazzrah.png'},
-		    {name:'Baron Geddon', 						percent:'15%', 	killdate:'', 					killcount:'0', killtime:'', 				image:'geddon.png'},
-		    {name:'Sulfuronherold', 					percent:'15%', 	killdate:'', 					killcount:'0', killtime:'', 				image:'sulfuron.png'},
-		    {name:'Golemagg der Verbrenner', 	percent:'15%', 	killdate:'', 					killcount:'0', killtime:'', 				image:'golemagg.png'},
-		    {name:'Majordomus Exekutus', 			percent:'15%', 	killdate:'', 					killcount:'0', killtime:'', 				image:'majordomus.png'},
-		    {name:'Ragnaros', 								percent:'15%', 	killdate:'', 					killcount:'0', killtime:'', 				image:'ragnaros.png'},
+		    {name:'Lucifron', 								percent:'25', 	killdate:'', 					killcount:'', killtime:'', 				image:'lucifron.png'},
+		    {name:'Magmadar', 								percent:'50', 	killdate:'', 					killcount:'', killtime:'', 				image:'magmadar.png'},
+		    {name:'Gehennas', 								percent:'75', 	killdate:'', 					killcount:'', killtime:'', 				image:'gehennas.png'},
+		    {name:'Garr', 										percent:'0', 	killdate:'', 					killcount:'', killtime:'', 				image:'garr.png'},
+		    {name:'Shazzrah', 								percent:'0', 	killdate:'', 					killcount:'', killtime:'', 				image:'shazzrah.png'},
+		    {name:'Baron Geddon', 						percent:'0', 	killdate:'', 					killcount:'', killtime:'', 				image:'geddon.png'},
+		    {name:'Sulfuronherold', 					percent:'0', 	killdate:'', 					killcount:'', killtime:'', 				image:'sulfuron.png'},
+		    {name:'Golemagg der Verbrenner', 	percent:'0', 	killdate:'', 					killcount:'', killtime:'', 				image:'golemagg.png'},
+		    {name:'Majordomus Exekutus', 			percent:'0', 	killdate:'', 					killcount:'', killtime:'', 				image:'majordomus.png'},
+		    {name:'Ragnaros', 								percent:'0', 	killdate:'', 					killcount:'', killtime:'', 				image:'ragnaros.png'},
 		],
 	},
 	raids_directive = {
-	    'onyxia':{
+	    'onyxia boss':{
 	        'boss<-onyxia':{
 	          'img@src':'img/class/#{boss.class}',
 	          'encounter':'boss.name',
-	          'percent':'boss.percent',
+	          'percent':'#{boss.percent}%',
+	          'percent@style':'width:#{boss.percent}%',
+	          'percent@aria-valuenow':'boss.percent',
 	          'killdate':'boss.killdate',
 	          'killcount':'boss.killcount',
 	          'killtime':'boss.killtime',
@@ -184,11 +188,13 @@
 		      return cmp( a.name, b.name );
 		    }
 	    },
-	    'moltencore':{
+	    'moltencore boss':{
 	        'boss<-moltencore':{
-	          'img@src':'img/raids/#{boss.image}',
+	          'img@src':'img/class/#{boss.class}',
 	          'encounter':'boss.name',
-	          'percent':'boss.percent',
+	          'percent':'#{boss.percent}%',
+	          'percent@style':'width:#{boss.percent}%',
+	          'percent@aria-valuenow':'boss.percent',
 	          'killdate':'boss.killdate',
 	          'killcount':'boss.killcount',
 	          'killtime':'boss.killtime',
