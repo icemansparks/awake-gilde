@@ -614,7 +614,6 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
     -webkit-mask-image: radial-gradient(ellipse 85% 76% at 50% 60%, black 42%, transparent 52%);
     mask-image: radial-gradient(ellipse 90% 80% at 48% 78%, black 40%, transparent 50%);
 }
-}
 
 .raid_name {
     font-size: 3rem;
