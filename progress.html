@@ -82,22 +82,34 @@
     
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-      	<h3 class="raid_name">zusammenfassung für den raid progress - Onyxia</h3>
+      	<h3 class="raid_name">Onyxia's Lair</h3>
 	      
 	      <onyxia class="encounter_list">
-					<boss class="encounter_entry">
-						<div class="boss_portrait col-xs-4">
-							<img src="" class="img-responsive boss_image">
-						  <percent class="progress">
-								<div class="progress-bar" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
-							</percent>
-						</div>
-						<div class="boss_details col-xs-8"> 
-							<encounter></encounter>	
-							<killdate></killdate>
-							<killcount></killcount>
-							<killtime></killtime>
-						</div>
+					<boss class="encounter_entry card text-white bg-dark mb-3">
+
+						  <div class="row no-gutters">
+						    <div class="col-md-4 boss_portrait">
+						      <img src="" class="card-img boss_image" alt="">
+						    </div>
+						    <div class="col-md-8">
+						      <div class="card-body">
+						        <h5 class="card-title"><encounter></encounter></h5>
+						        <p class="card-text boss_details">
+						        	<killdate></killdate>
+											<killcount></killcount>
+											<killtime></killtime>
+										</p>
+						        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+						      </div>
+						    </div>
+						  </div>
+
+							<div class="boss_portrait col-xs-4">
+							  <div class="progress">
+									<div class="progress-bar" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+
 					</boss>
 	      </onyxia>
 
@@ -106,22 +118,34 @@
 
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-      	<h3 class="raid_name">zusammenfassung für den raid progress - Molten Core</h3>
+      	<h3 class="raid_name">Molten Core</h3>
 
 				<moltencore class="encounter_list">
-					<boss class="encounter_entry">
-						<div class="boss_portrait col-xs-4">
-							<img src="" class="img-responsive boss_image">
-						  <percent class="progress">
-								<div class="progress-bar" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
-							</percent>
-						</div>
-						<div class="boss_details col-xs-8"> 
-							<encounter></encounter>	
-							<killdate></killdate>
-							<killcount></killcount>
-							<killtime></killtime>
-						</div>
+					<boss class="encounter_entry card text-white bg-dark mb-3">
+
+						  <div class="row no-gutters">
+						    <div class="col-md-4 boss_portrait">
+						      <img src="" class="card-img boss_image" alt="">
+						    </div>
+						    <div class="col-md-8">
+						      <div class="card-body">
+						        <h5 class="card-title"><encounter></encounter></h5>
+						        <p class="card-text boss_details">
+						        	<killdate></killdate>
+											<killcount></killcount>
+											<killtime></killtime>
+										</p>
+						        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+						      </div>
+						    </div>
+						  </div>
+
+							<div class="boss_portrait col-xs-4">
+							  <div class="progress">
+									<div class="progress-bar" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+
 					</boss>
 				</moltencore>
 
@@ -172,11 +196,16 @@
 	raids_directive = {
 	    'onyxia boss':{
 	        'boss<-onyxia':{
-	          'img@src':'img/class/#{boss.class}',
+	          'img@src':'img/raids/#{boss.image}',
+	          'img@alt':'boss.name',
 	          'encounter':'boss.name',
-	          'percent':'#{boss.percent}%',
-	          'percent@style':'width:#{boss.percent}%',
-	          'percent@aria-valuenow':'boss.percent',
+	          '.progress-bar':'#{boss.percent}%',
+	          '.progress-bar@style+':'width:#{boss.percent}%;',
+	          '.progress-bar@aria-valuenow':'boss.percent',
+	          '.progress-bar@aria-valuemin':'0',
+	          '.progress-bar@aria-valuemax':'100',
+	          '.progress-bar@role':'progressbar',
+	          '.progress-bar@aria-valuenow':'boss.percent',
 	          'killdate':'boss.killdate',
 	          'killcount':'boss.killcount',
 	          'killtime':'boss.killtime',
@@ -190,11 +219,16 @@
 	    },
 	    'moltencore boss':{
 	        'boss<-moltencore':{
-	          'img@src':'img/class/#{boss.class}',
+	          'img@src':'img/raids/#{boss.image}',
+	          'img@alt':'boss.name',
 	          'encounter':'boss.name',
-	          'percent':'#{boss.percent}%',
-	          'percent@style':'width:#{boss.percent}%',
-	          'percent@aria-valuenow':'boss.percent',
+	          '.progress-bar':'#{boss.percent}%',
+	          '.progress-bar@style+':'width:#{boss.percent}%;',
+	          '.progress-bar@aria-valuenow':'boss.percent',
+	          '.progress-bar@aria-valuemin':'0',
+	          '.progress-bar@aria-valuemax':'100',
+	          '.progress-bar@role':'progressbar',
+	          '.progress-bar@aria-valuenow':'boss.percent',
 	          'killdate':'boss.killdate',
 	          'killcount':'boss.killcount',
 	          'killtime':'boss.killtime',

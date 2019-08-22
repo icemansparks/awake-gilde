@@ -12,11 +12,11 @@ h2 {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 400;
-	font-size: 30px;
+	font-size: 3rem;
 }
 h3, h4 {
 	color: #222;
-	font-size: 18px;
+	font-size: 2rem;
 	font-weight: 300;
 	letter-spacing: 1px;
 }
@@ -604,7 +604,21 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
     margin: 15rem 0;
 }
 
+.raid_name {
+    font-size: 3rem;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-align: center;
+}
+
+
 .progress {
+    height: 1.125rem;
+    margin-bottom: 0;
+}
+.progress-bar {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -616,9 +630,48 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
     white-space: nowrap;
     background-color: #007bff;
     transition: width .6s ease;
+    font-size: 1.25rem;
+}
+
+.encounter_list {
+    margin-bottom: 5rem;
+    float: left;
+    clear: both;
+    width: 100%;
 }
 
 .encounter_entry {
     float: left;
     width: 100%;
+    border: 1px solid #fff;
+    display: table-cell;
+    padding: .75rem;
+    color: #fff;
+    background-color: #333;
+}
+
+.boss_image {
+    margin: 1rem 0;
+}
+
+encounter {
+    font-size: 2rem;
+    width: 100%;
+    clear: both;
+    float: left;
+}
+
+.bg-dark {
+    background-color: #333!important;
+}
+.text-white {
+    color: #fff!important;
+}
+
+.card {
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    margin-bottom: .5rem;
 }
