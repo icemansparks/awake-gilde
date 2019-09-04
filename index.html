@@ -242,7 +242,7 @@
 			    <img class="img-responsive playerclass" src="" alt="">
 			    <playername class="playername"></playername>
 			    <playertitles class="playertitles">
-			    	<playercouncil></playercouncil><br>
+			    	<playercouncil></playercouncil>
 			    	<playertitle></playertitle>
 				</playertitles>
 			  </player>
@@ -473,7 +473,7 @@
 	          '@class+':'#{member.class} #{member.title} #{member.council}',
 	          'playername':'member.name', 
 	          'playertitle':'member.title', 
-	          'playercouncil':'member.council', 
+	          'playercouncil':'#{member.council}<br>', 
 	          'img@src': 'img/class/#{member.class}.png', 
 	          'img@alt': 'member.klasse', 
 	        },
