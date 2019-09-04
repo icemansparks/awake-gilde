@@ -551,8 +551,8 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .player{
 	margin: 0;
     float: left;
-    min-height: 72px;
-    height: 72px;
+    min-height: 80px;
+    height: 80px;
 }
 
 .playerclass {
