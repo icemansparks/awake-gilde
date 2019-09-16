@@ -1,4 +1,10 @@
 ---
 label: index-template
 hide_body: false
-fields: []
+fields:
+- name: about-text
+  type: text
+  config:
+    required: false
+  label: about-text
+  description: about-text
