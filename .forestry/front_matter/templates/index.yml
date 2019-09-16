@@ -1,6 +1,7 @@
 ---
 label: index
-hide_body: false
+hide_body: true
+display_field: about-text
 fields:
 - name: about-text
   type: text
