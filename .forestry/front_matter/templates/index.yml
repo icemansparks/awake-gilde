@@ -2,8 +2,9 @@
 label: index
 hide_body: false
 fields:
-- name: text
+- name: about-text
   type: text
   config:
     required: false
-  label: Text
+  label: about-text
+  description: about-text
