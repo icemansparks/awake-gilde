@@ -218,6 +218,7 @@ hr {
     background: url(../img/background/bg-medium.jpg) no-repeat center top;
   }
 }
+
 @media (min-width: 1000px) {
   .intro {
     background: url(../img/background/bg-large.jpg) no-repeat center top;
