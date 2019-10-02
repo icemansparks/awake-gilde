@@ -216,12 +216,20 @@ hr {
 @media (min-width: 500px) {
   .intro {
     background: url(../img/background/bg-medium.jpg) no-repeat center top;
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
   }
 }
 
 @media (min-width: 1000px) {
   .intro {
     background: url(../img/background/bg-large.jpg) no-repeat center top;
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
   }
 }
 
