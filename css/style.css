@@ -202,7 +202,7 @@ hr {
 	padding: 0;
 	text-align: center;
 	color: #d3d3d3;
-	background: url(../img/intro-bg.jpg) no-repeat center top;
+	background: url(../img/background/bg-small.jpg) no-repeat center top;
 	background-color: #e5e5e5;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -212,6 +212,18 @@ hr {
     height: auto !important;
     box-shadow: inset 0px 0px 100px black;
 }
+
+@media (min-width: 500px) {
+  .intro {
+    background: url(../img/background/bg-medium.jpg) no-repeat center top;
+  }
+}
+@media (min-width: 1000px) {
+  .intro {
+    background: url(../img/background/bg-large.jpg) no-repeat center top;
+  }
+}
+
 
 @media only screen and (min-width: 1000px) {
 	.intro:after {
