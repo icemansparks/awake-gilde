@@ -744,5 +744,7 @@ i.fas {
     display: contents;
 }
 
-
+.fnav, .fnav a {
+    color: #333;
+}
 
