@@ -386,6 +386,7 @@ ol.type li a:hover {
 }
 .hover-bg:hover .hover-text>h4 {
 	opacity: 1;
+	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: translateY(0);
 	transform: translateY(0);
@@ -398,6 +399,7 @@ ol.type li a:hover {
 }
 .hover-bg:hover .hover-text>i {
 	opacity: 1;
+	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: translateY(100%);
 	transform: translateY(100%);
@@ -641,10 +643,6 @@ playercouncil{
 	.col-tn-12 {
 		width: 100%; 	
 	}
-}
-
-.raidprogress {
-    
 }
 
 .raidprogressbar{
