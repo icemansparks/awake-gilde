@@ -324,7 +324,7 @@
 		    }
 	    }
 	};
-	$p( '.recruitment' ).render( data2, directive2 );
+	$p('.recruitment').render( data2, directive2 );
 
 	//Content for Memberlist
 	var data = {
@@ -413,67 +413,16 @@
 	          'img@src': 'img/class/#{member.class}.png', 
 	          'img@alt': 'member.klasse', 
 	        },
-	        sort: function(a, b){ // same kind of sort as the usual Array sort
-		      var cmp = function(x, y){ 
-		        return x > y? 1 : x < y ? -1 : 0;
-		      };
-		      return cmp( a.name, b.name );
-		    }
-	    }
-	};
-	$p( '.memberlist' ).render( data, directive );
-
-
-	//Content for Raid Progress
-	// WIP - not finished yet
-  /*
-	var raids = {
-		onyxia:[
-		    {name:'Onyxia', 			killdate:'02.10.19', 	killcount:'2', killtime:'00:23:15', 	image:'onyxia.png'},
-		],
-		moltencore:[
-		    {name:'Lucifron', 			killdate:'', 		killcount:'0', killtime:'', 		image:'lucifron.png'},
-		    {name:'Magmadar', 			killdate:'', 		killcount:'0', killtime:'', 		image:'magmadar.png'},
-		    {name:'Gehennas', 			killdate:'', 		killcount:'0', killtime:'', 		image:'gehennas.png'},
-		    {name:'Garr', 			killdate:'', 		killcount:'0', killtime:'', 		image:'garr.png'},
-		    {name:'Shazzrah', 			killdate:'', 		killcount:'0', killtime:'', 		image:'shazzrah.png'},
-		    {name:'Baron Geddon', 		killdate:'', 		killcount:'0', killtime:'', 		image:'geddon.png'},
-		    {name:'Sulfuronherold', 		killdate:'', 		killcount:'0', killtime:'', 		image:'sulfuron.png'},
-		    {name:'Golemagg der Verbrenner', 	killdate:'', 		killcount:'0', killtime:'', 		image:'golemagg.png'},
-		    {name:'Majordomus Exekutus', 	killdate:'', 		killcount:'0', killtime:'', 		image:'majordomo.png'},
-		    {name:'Ragnaros', 			killdate:'', 		killcount:'0', killtime:'', 		image:'ragnaros.png'},
-		],
-	},
-	raids_directive = {
-	    'onyxia boss':{
-	        'boss<-onyxia':{
-	          'img@src':'img/raids/#{boss.image}',
-	          'img@alt':'boss.name',
-	          'encounter':'boss.name',
-	          'killdate':'boss.killdate',
-	          'killcount':'boss.killcount',
-	          'killtime':'boss.killtime',
-	        },
 	        sort: function(a, b){
 		      var cmp = function(x, y){ 
 		        return x > y? 1 : x < y ? -1 : 0;
 		      };
 		      return cmp( a.name, b.name );
 		    }
-	    },
-	    'moltencore boss':{
-	        'boss<-moltencore':{
-	          'img@src':'img/raids/#{boss.image}',
-	          'img@alt':'boss.name',
-	          'encounter':'boss.name',
-	          'killdate':'boss.killdate',
-	          'killcount':'boss.killcount',
-	          'killtime':'boss.killtime',
-	        }
 	    }
 	};
-	$p( '.raidprogress' ).render( raids, raids_directive );
-  */
+	$p('.memberlist').render( data, directive );
+
 
 </script>
 
