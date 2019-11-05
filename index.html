@@ -29,7 +29,7 @@
 	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	    <![endif]-->
 	
-	<script type="text/javascript" src="js/pure.js"></script>
+
 
 	<!-- Favicons -->
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -292,7 +292,7 @@
 
 <script>
 	//Content for Recruitment Table
-	var data2 = {
+	var data_recruitment = {
 		recruitment:[
 		    {class:'druid',		klasse:'Druide', 		spec:'- Wiederherstellung', status:'Geschlossen'},
 		    {class:'druid',		klasse:'Druide', 		spec:'- Wilder Kampf', 		status:'Geschlossen'},
@@ -307,7 +307,7 @@
 		    {class:'rogue',		klasse:'Schurke', 		spec:'', 					status:'Geschlossen'},
 		]
 	},
-	directive2 = {
+	directive_recruitment = {
 	    'recruitment':{
 	        'recruit<-recruitment':{
 	          'img@src':'img/class/#{recruit.class}.png',
@@ -324,10 +324,10 @@
 		    }
 	    }
 	};
-	$p('.recruitment').render( data2, directive2 );
+	$p('.recruitment').render(data_recruitment, directive_recruitment);
 
 	//Content for Memberlist
-	var data = {
+	var data_members = {
 		members:[
 			{name:'Jayjojane', 	class:'druid', 		klasse:'Druide', 	role:'heal', title:'', 				council:''}, 				//Dragon's Call
 			{name:'Leckzunge', 	class:'druid', 		klasse:'Druide', 	role:'heal', title:'', 				council:''}, 				//Dragon's Call
@@ -403,7 +403,7 @@
 			{name:'Schamanin', 		class:'shaman', 	klasse:'Schamane', 	role:'', title:'', 				council:''}, 					//unbekannt
 		]
 	},
-	directive = {
+	directive_members = {
 	    'div':{
 	        'member<-members':{
 	          '@class+':'#{member.class} #{member.title} #{member.council}',
@@ -421,10 +421,11 @@
 		    }
 	    }
 	};
-	$p('.memberlist').render( data, directive );
-
+	$p('.memberlist').render(data_members, directive_members);
 
 </script>
+
+	<script type="text/javascript" src="js/pure.js"></script>
 
 </body>
 </html>
