@@ -295,6 +295,7 @@
 <script type="text/javascript" src="js/pure.js"></script>
 
 <script>
+	p = function(){};
 	//Content for Recruitment Table
 	var data_recruitment = {
 		recruitment:[
@@ -310,8 +311,8 @@
 		    {class:'shaman',	klasse:'Schamane', 		spec:'- Wiederherstellung', status:'Geschlossen'},
 		    {class:'rogue',		klasse:'Schurke', 		spec:'', 					status:'Geschlossen'},
 		]
-	},
-	directive_recruitment = {
+	};
+	var directive_recruitment = {
 	    'recruitment':{
 	        'recruit<-recruitment':{
 	          'img@src':'img/class/#{recruit.class}.png',
@@ -406,8 +407,8 @@
 			{name:'Rindeastwòód', 	class:'shaman', 	klasse:'Schamane', 	role:'', title:'', 				council:''}, 					//unbekannt
 			{name:'Schamanin', 		class:'shaman', 	klasse:'Schamane', 	role:'', title:'', 				council:''}, 					//unbekannt
 		]
-	},
-	directive_members = {
+	};
+	var directive_members = {
 	    'div':{
 	        'member<-members':{
 	          '@class+':'#{member.class} #{member.title} #{member.council}',
@@ -428,8 +429,6 @@
 	$p('.memberlist').render(data_members, directive_members);
 
 </script>
-
-
 
 </body>
 </html>
