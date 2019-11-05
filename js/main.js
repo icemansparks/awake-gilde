@@ -17,16 +17,6 @@ function main() {
         }
       });
 
-	// affix the navbar after scroll below header
-  /*
-$('#nav').affix({
-      offset: {
-        top: $('header').height()
-      }
-});	
-*/
-
-	
   	// Portfolio isotope filter
     $(window).load(function() {
         var $container = $('.portfolio-items');
@@ -54,14 +44,6 @@ $('#nav').affix({
         });
 
     });
-	
-
-    // Nivo Lightbox 
-    $('.portfolio-item a').nivoLightbox({
-            effect: 'slideDown',  
-            keyboardNav: true,                            
-        });
- 
 
 }());
 
