@@ -150,6 +150,9 @@ hr {
 .navbar-custom .nav li.active a:hover {
 	color: #fff;
 }
+.navbar-toggle{
+	color: #f5f5f5;
+}
 .btn-default {
 	text-transform: uppercase;
 	color: #fff;
