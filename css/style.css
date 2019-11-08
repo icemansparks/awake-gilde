@@ -183,13 +183,13 @@ hr {
 .btn-header {
 	text-transform: uppercase;
 	color: #d3d3d3;
-	background-color: transparent;
-	border-color: #777;
 	padding: 14px 20px;
 	margin: 0;
 	font-size: 16px;
 	border-radius: 0;
 	margin-top: 20px;
+	border: 3px solid #1f1e1b;
+	background-color: #343434;
 }
 .btn-header:hover, .btn-header:focus, .btn-header.focus, .btn-header:active, .btn-header.active {
 	color: #fff;
@@ -765,4 +765,9 @@ i.fas {
 
 .fnav, .fnav a {
     color: #333;
+}
+
+i.fa.fa-bars {
+	color: #f5f5f5;
+	padding-right: 1rem;
 }
