@@ -71,7 +71,8 @@
         <ul class="nav navbar-nav">
           <li> <a href="#" class="navlink" data-contentblock="home"><i class="fas fa-home"></i>Home</a></li>
           <li> <a href="#" class="navlink" data-contentblock="about"><i class="fas fa-coffee"></i>Über uns</a></li>
-          <li> <a href="#" class="navlink" data-contentblock="recruitment"><i class="fas fa-user-plus"></i>Recruitment</a></li>
+		  <li> <a href="#" class="navlink" data-contentblock="recruitment"><i class="fas fa-user-plus"></i>Recruitment - Raid 1</a></li>
+		  <li> <a href="#" class="navlink" data-contentblock="recruitment2"><i class="fas fa-user-plus"></i>Recruitment - Raid 2</a></li>
           <li> <a href="#" class="navlink" data-contentblock="rooster"><i class="fas fa-users"></i>Mitglieder</a></li>
           <li> <a href="https://raids.awake-gilde.de" target="_blank" class="navlink hidden" data-contentblock="raidpplaner" rel="noopener"><i class="fas fa-calendar-alt"></i>Raid-Planer</a></li>
         </ul>
@@ -170,7 +171,7 @@ Der belebte und fraktionell ausgeglichene Server Dragons Call beherbergt auch au
 </div>
 </div>
 
-<!-- Recruitment Section -->
+<!-- Recruitment Raid 1 Section -->
 <div class="contentblock recruitment">
   <div class="container">
     
@@ -179,7 +180,7 @@ Der belebte und fraktionell ausgeglichene Server Dragons Call beherbergt auch au
     </div>
     
     <div class="section-title text-center center">
-      <h2>Recruitment</h2>
+      <h2>Recruitment - Nachtraid</h2>
       <hr>
     </div>
     
@@ -226,6 +227,66 @@ Der belebte und fraktionell ausgeglichene Server Dragons Call beherbergt auch au
     </div>
 
   </div>
+</div>
+
+<!-- Recruitment Raid 2 Section -->
+<div class="contentblock recruitment2">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-12 text-center"><img src="img/recruit.jpg" class="img-responsive"></div>
+		</div>
+
+		<div class="section-title text-center center">
+			<h2>Recruitment - Raid 2</h2>
+			<hr>
+		</div>
+
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="about-text">
+					<p>Eine Bewerbung auf "Geschlossene" Klassen ist grundsätzlich möglich, muss aber sehr überzeugend
+						sein. Bitte gebt uns 3 Tage Zeit um eure Bewerbung zu bearbeiten.
+						<br><br>
+						Unabhängig des Recruitment Status kannst du dich auch als Social bewerben. Ein wechsel von einem
+						Social Platz auf einen Raid Platz ist später nicht ausgeschlossen.</p>
+					<p>Eine Bewerbung auf einen reinen PvP Platz ist ebenfalls möglich.</p>
+					<br>
+
+					<div class="divTable">
+						<div class="divTableBody">
+
+							<div class="divTableRow">
+								<div class="divTableCell divTableHead">Klasse</div>
+								<div class="divTableCell divTableHead">Status</div>
+							</div>
+
+							<recruitment2 class="divTableRow">
+								<recruit2 class="divTableCell">
+									<img src="" class="img-responsive">
+									<recruit2_klasse></recruit2_klasse>
+									<recruit2_spec></recruit2_spec>
+								</recruit2>
+								<recruit2_status class="divTableCell color_"></recruit2_status>
+							</recruitment2>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<a href="https://discord.gg/35jZ3C3" class="btn btn-default btn-lg page-scroll">Bewerbung in Discord</a>
+				<br>
+				<br>
+				<br>
+			</div>
+		</div>
+
+	</div>
 </div>
 
 <!-- Rooster Section -->
@@ -332,6 +393,41 @@ Der belebte und fraktionell ausgeglichene Server Dragons Call beherbergt auch au
 	    }
 	};
 	$p('.recruitment').render(data_recruitment, directive_recruitment);
+
+	//Content for Recruitment - Raid 2 Table
+	var data_recruitment2 = {
+		recruitment2: [
+			{ class: 'druid', klasse: 'Druide', spec: '- Wiederherstellung', status: 'Niedrig' },
+			{ class: 'druid', klasse: 'Druide', spec: '- Wilder Kampf', status: 'Geschlossen' },
+			{ class: 'hunter', klasse: 'Jäger', spec: '', status: 'Niedrig' },
+			{ class: 'warrior', klasse: 'Krieger', spec: '- Schutz', status: 'Niedrig' },
+			{ class: 'warrior', klasse: 'Krieger', spec: '- Furor', status: 'Niedrig' },
+			{ class: 'warlock', klasse: 'Hexenmeister', spec: '', status: 'Niedrig' },
+			{ class: 'mage', klasse: 'Magier', spec: '', status: 'Mittel' },
+			{ class: 'priest', klasse: 'Priester', spec: '- Heilig / Disziplin', status: 'Geschlossen' },
+			{ class: 'priest', klasse: 'Priester', spec: '- Schatten', status: 'Geschlossen' },
+			{ class: 'shaman', klasse: 'Schamane', spec: '- Wiederherstellung', status: 'Offen' },
+			{ class: 'rogue', klasse: 'Schurke', spec: '', status: 'Niedrig' },
+		]
+	};
+	var directive_recruitment2 = {
+		'recruitment2': {
+			'recruit2<-recruitment2': {
+				'img@src': 'img/class/#{recruit2.class}.png',
+				'recruit2_status@class+': 'recruit2.status',
+				'recruit2_status': 'recruit2.status',
+				'recruit2_klasse': 'recruit2.klasse',
+				'recruit2_spec': '#{recruit2.spec}',
+			},
+			sort: function (a, b) {
+				var cmp = function (x, y) {
+					return x > y ? 1 : x < y ? -1 : 0;
+				};
+				return cmp(a.name, b.name);
+			}
+		}
+	};
+	$p('.recruitment2').render(data_recruitment2, directive_recruitment2);
 
 	//Content for Memberlist
 	var data_members = {
