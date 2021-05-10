@@ -164,7 +164,7 @@ Der belebte und fraktionell ausgeglichene Server Dragons Call beherbergt auch au
         <p>
         <ul>
           <li>Raidzeiten Nachtraid: Sonntag und Donnerstag - start ca. 23:30 - 3:00</li>
-	<li>Raidzeiten Raid 2: Montag und Mittwoch - start ca. 20:30 - 23:30</li>	
+	
         <li>Anzahl Raidtage: 2 für 40er, 20er Raids an Offtagen</li>
         <li>Transparente und faire Lootverteilung durch ein Loot Council bestehend aus 7 erfahrenen Mitgliedern des Gildenrats.</li>
         </ul>
@@ -372,17 +372,17 @@ Der belebte und fraktionell ausgeglichene Server Dragons Call beherbergt auch au
 		    {class:'paladin',		klasse:'Paladin', 		spec:'- Schutz', status:'Niedrig'},
 			{class:'paladin',		klasse:'Paladin', 		spec:'- Vergeltung', status:'Niedrig'},
 			{class:'paladin',		klasse:'Paladin', 		spec:'- Heilig', status:'Niedrig'},
-			{class:'druid',		klasse:'Druide', 		spec:'- Wiederherstellung', status:'Niedrig'},
-		    {class:'druid',		klasse:'Druide', 		spec:'- Wilder Kampf', 		status:'Geschlossen'},
-		    {class:'hunter',	klasse:'Jäger', 		spec:'', 					status:'Offen'},
+			{class:'druid',		klasse:'Druide', 		spec:'- Wiederherstellung', status:'Geschlossen'},
+		    {class:'druid',		klasse:'Druide', 		spec:'- Wilder Kampf', 		status:'Niedrig'},
+		    {class:'hunter',	klasse:'Jäger', 		spec:'', 					status:'Niedrig'},
 		    {class:'warrior',	klasse:'Krieger', 		spec:'- Schutz',			status:'Niedrig'},
-		    {class:'warrior',	klasse:'Krieger', 		spec:'- Furor', 			status:'Mittel'},
-		    {class:'warlock',	klasse:'Hexenmeister',	spec:'',	 				status:'Mittel'},
+		    {class:'warrior',	klasse:'Krieger', 		spec:'- Furor', 			status:'Geschlossen'},
+		    {class:'warlock',	klasse:'Hexenmeister',	spec:'',	 				status:'Niedrig'},
 		    {class:'mage',		klasse:'Magier',		spec:'', 					status:'Niedrig'},
-		    {class:'priest',	klasse:'Priester', 		spec:'- Heilig / Disziplin',status:'Mittel'},
+		    {class:'priest',	klasse:'Priester', 		spec:'- Heilig / Disziplin',status:'Geschlossen'},
 		    {class:'priest',	klasse:'Priester', 		spec:'- Schatten', 			status:'Niedrig'},
-		    {class:'shaman',	klasse:'Schamane', 		spec:'- Wiederherstellung', status:'Mittel'},
-		    {class:'rogue',		klasse:'Schurke', 		spec:'', 					status:'Mittel'},
+		    {class:'shaman',	klasse:'Schamane', 		spec:'- Wiederherstellung', status:'Niedrig'},
+		    {class:'rogue',		klasse:'Schurke', 		spec:'', 					status:'Geschlossen'},
 		]
 	};
 	var directive_recruitment = {
@@ -404,40 +404,7 @@ Der belebte und fraktionell ausgeglichene Server Dragons Call beherbergt auch au
 	};
 	$p('.recruitment').render(data_recruitment, directive_recruitment);
 
-	//Content for Recruitment - Raid 2 Table
-	var data_recruitment2 = {
-		recruitment2: [
-			{ class: 'druid', klasse: 'Druide', spec: '- Wiederherstellung', status: 'Geschlossen' },
-			{ class: 'druid', klasse: 'Druide', spec: '- Wilder Kampf', status: 'Geschlossen' },
-			{ class: 'hunter', klasse: 'Jäger', spec: '', status: 'Mittel' },
-			{ class: 'warrior', klasse: 'Krieger', spec: '- Schutz', status: 'Geschlossen' },
-			{ class: 'warrior', klasse: 'Krieger', spec: '- Furor', status: 'Mittel' },
-			{ class: 'warlock', klasse: 'Hexenmeister', spec: '', status: 'Geschlossen' },
-			{ class: 'mage', klasse: 'Magier', spec: '', status: 'Mittel' },
-			{ class: 'priest', klasse: 'Priester', spec: '- Heilig / Disziplin', status: 'Mittel' },
-			{ class: 'priest', klasse: 'Priester', spec: '- Schatten', status: 'Geschlossen' },
-			{ class: 'shaman', klasse: 'Schamane', spec: '- Wiederherstellung', status: 'Mittel' },
-			{ class: 'rogue', klasse: 'Schurke', spec: '', status: 'Geschlossen' },
-		]
-	};
-	var directive_recruitment2 = {
-		'recruitment2': {
-			'recruit2<-recruitment2': {
-				'img@src': 'img/class/#{recruit2.class}.png',
-				'recruit2_status@class+': 'recruit2.status',
-				'recruit2_status': 'recruit2.status',
-				'recruit2_klasse': 'recruit2.klasse',
-				'recruit2_spec': '#{recruit2.spec}',
-			},
-			sort: function (a, b) {
-				var cmp = function (x, y) {
-					return x > y ? 1 : x < y ? -1 : 0;
-				};
-				return cmp(a.name, b.name);
-			}
-		}
-	};
-	$p('.recruitment2').render(data_recruitment2, directive_recruitment2);
+	
 
 	//Content for Memberlist
 	var data_members = {
